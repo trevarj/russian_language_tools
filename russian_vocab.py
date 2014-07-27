@@ -12,7 +12,7 @@ import time
 
 csvfile_name 		= "10000_russian.csv"
 #				 		beg		   int          adv
-difficulty	 		= [[0,499, "**BEGINNER**"], [500,4999, "**INTERMEDIATE**"], [5000,9207, "**ADVANCED**"]]
+difficulty			= [[0,499, "**BEGINNER**"], [500,4999, "**INTERMEDIATE**"], [5000,9207, "**ADVANCED**"]]
 words_per_diff		= 8
 
 # Indexes CSV file, generates random numbers within difficult ranges and builts a list of n
@@ -80,7 +80,7 @@ self_post_text = formatPostString(weekly_words)
 
 # submit self post
 title = "Weekly Vocabulary Words " + time.strftime("%d/%m/%Y")
-r.submit("organicboys", title, self_post_text)
+r.submit("russian", title, self_post_text)
 
 print "Post successful!"
 
