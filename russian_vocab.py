@@ -18,20 +18,25 @@ words_per_diff		= 8
 # Indexes CSV file, generates random numbers within difficult ranges and builts a list of n
 # words where n is words_per_diff
 def grabWords():
-	indexed_csv = []
+	indexed_csv 	= []
 	final_word_list = []
-	num_ranges = [ [0,99],[100,499],[500,1999],[2000,4999],[5000,9999] ]
-	csvfile = open(csvfile_name,'rb')
-	word_db = csv.reader(csvfile)
+	num_ranges 		= [ [0,99],[100,499],[500,1999],[2000,4999],[5000,9999] ]
+	rand_set		= set()
+	csvfile 		= open(csvfile_name,'rb')
+	word_db 		= csv.reader(csvfile)
+
 	for row in word_db:
 		indexed_csv.append(row)
 
 	output_file = open('words.txt','w')
-
+	rand_set.add(-1)
+	rand = -1
 	for x in range(len(difficulty)):
 		output_file.write(difficulty[x][2] + '\n')
 		for y in range(0,words_per_diff):
-			rand = random.randint(difficulty[x][0], difficulty[x][1])
+			while rand in rand_set:
+				rand = random.randint(difficulty[x][0], difficulty[x][1])
+			rand_set.add(rand)
 			final_word_list.append(indexed_csv[rand])
 			output_file.write(indexed_csv[rand][0] + ' -> ' + indexed_csv[rand][1] + '\n')
 
