@@ -1,6 +1,8 @@
-Russian Tools
+<h1>Russian Tools</h1>
 ===========
 
-Scripts to automatically post to reddit
+<h2>russian_post.py</h2>
+Posts some random words to r/russian
 
-russian_post.py uses python2.7
+<h2>russian_get_stress.py</h2>
+Scrapes Yandex словари for stress marks on a given word/words.
