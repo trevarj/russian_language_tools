@@ -10,7 +10,7 @@ import codecs
 import time
 
 
-csvfile_name 		= "10000_russian.csv"
+csvfile_name 		= "10000_russian_stress.csv"
 #				 		beg		   int          adv
 difficulty			= [[0,499, "**BEGINNER**"], [500,4999, "**INTERMEDIATE**"], [5000,9207, "**ADVANCED**"]]
 words_per_diff		= 8

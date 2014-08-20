@@ -1,4 +1,4 @@
-reddit_post
+Russian Tools
 ===========
 
 Scripts to automatically post to reddit
