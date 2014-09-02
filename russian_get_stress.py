@@ -22,16 +22,15 @@ def inputFromCSV(csvfile_name):
 	sys.stdout.write('Starting... ')
 	for row in word_db:
 		# index 0 is russian word
-		row[0] = getStress(row[0].split(' ', 1)[0])
+		row[0] = getStress(row[0])
 		cwriter.writerow(row)
 		counter += 1
-		if counter % 500 == 0:
-			sys.stdout.write('.')
-			counter = 0
+		if counter % 1000 == 0:
+			sys.stdout.write(str(counter))
+			
 	
 	output_file.close()
 	csvfile.close()
-	
 
 def singleLookup(word):
 	output = open('temp.txt', 'w')
@@ -74,4 +73,4 @@ def getStress(word):
 
 #singleLookup('здравствуйте')
 
-inputFromCSV("10000_russian.csv")
+inputFromCSV("20000_freq_russian_and_trans.csv")

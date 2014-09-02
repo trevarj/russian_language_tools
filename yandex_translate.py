@@ -8,7 +8,7 @@ import sys
 
 filename = '20000_freq_russian_no_trans_fix.txt'
 out_filename = '20000_freq_russian_no_trans_fix2.txt'
-API_key = 'trnsl.1.1.20140824T181925Z.7e2ef313ee9a9298.76bd8f1d728ded753747205bd93e924a68204369'
+API_key = 'YOUR KEY HERE'
 lang = 'ru-en'
 
 def generateFile():
