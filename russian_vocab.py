@@ -10,9 +10,9 @@ import codecs
 import time
 
 
-csvfile_name 		= "20000_freq_final.csv"
+csvfile_name 		= "10000_russian_stress.csv"
 #				 		beg		   int          adv
-difficulty			= [[0,499, "**BEGINNER**"], [500,4999, "**INTERMEDIATE**"], [5000,20002, "**ADVANCED**"]]
+difficulty			= [[0,499, "**BEGINNER**"], [500,4999, "**INTERMEDIATE**"], [5000,9207, "**ADVANCED**"]]
 words_per_diff		= 8
 
 # Indexes CSV file, generates random numbers within difficult ranges and builts a list of n
@@ -20,6 +20,7 @@ words_per_diff		= 8
 def grabWords():
 	indexed_csv 	= []
 	final_word_list = []
+	num_ranges 		= [ [0,99],[100,499],[500,1999],[2000,4999],[5000,9999] ]
 	rand_set		= set()
 	csvfile 		= open(csvfile_name,'rb')
 	word_db 		= csv.reader(csvfile)
