@@ -1,7 +1,7 @@
 <h1>Russian Tools</h1>
 ===========
 
-<h2>russian_post.py</h2>
+<h2>russian_vocab_v2.py</h2>
 Posts some random words to r/russian
 
 <h2>russian_get_stress.py</h2>
